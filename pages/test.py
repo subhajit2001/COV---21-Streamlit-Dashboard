@@ -12,9 +12,10 @@ def test():
         cov_tested['dailyrtpcrsamplescollectedicmrapplication'] = cov_tested['dailyrtpcrsamplescollectedicmrapplication'].replace(r'\s+', np.nan, regex=True)
         cov_tested['dailyrtpcrsamplescollectedicmrapplication'] = cov_tested['dailyrtpcrsamplescollectedicmrapplication'].fillna(0)
         #figure object
+        st.markdown("## Testing Data Visualization")
+        st.markdown("### Daily RT-PCR Samples Collected")
         tested = go.Figure()
-        tested.update_layout(height=500,width=800,legend_orientation="h",
-            title="Daily RTPCR Samples Collected vs Daywise Trend")
+        tested.update_layout(height=500,width=800,legend_orientation="h",title="Daywise Trend")
 
         #displaying daily confirmed cases plot
         tested.add_trace(go.Bar(
@@ -28,9 +29,10 @@ def test():
         cov_tested['totalrtpcrsamplescollectedicmrapplication'] = cov_tested['totalrtpcrsamplescollectedicmrapplication'].replace(r'\s+', np.nan, regex=True)
         cov_tested['totalrtpcrsamplescollectedicmrapplication'] = cov_tested['totalrtpcrsamplescollectedicmrapplication'].fillna(0)
         #figure object
+        st.markdown("### Total RT-PCR Samples Collected")
         tested = go.Figure()
         tested.update_layout(height=500,width=800,legend_orientation="h",
-            title="Total RTPCR Samples Collected vs Daywise Trend")
+            title="Daywise Trend")
 
         #displaying daily confirmed cases plot
         tested.add_trace(go.Bar(

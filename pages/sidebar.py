@@ -2,7 +2,7 @@ import streamlit as st
 #sidebar
 def sidebar_elements():
     st.sidebar.title('COVID-19 DASHBOARD')
-    pages = ['Home','Country Dashboard','India Dashboard','State Dashboard','Testing Data Dashboard','Vaccination Data Dashboard']
+    pages = ['Home','Country Dashboard','India Dashboard','State Dashboard','Testing Data Dashboard']
     page_selected = st.sidebar.radio("Navigate",pages,index=0)
     st.sidebar.subheader("About Me")
     st.sidebar.info(
